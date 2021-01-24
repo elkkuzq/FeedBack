@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
 
-const Statistiscs = (props) => {
-  if (props.all === 0)
+const Statistiscs = ({good, neutral, bad, all, text}) => {
+  if (.all === 0)
   {
     return(
       <div>
@@ -15,13 +15,13 @@ const Statistiscs = (props) => {
   return(
     <div>
       <h1>statics</h1>
-        <p>good {props.good}</p>
-        <p>neutral {props.neutral}</p>
-        <p>bad {props.bad}</p>
-        <p>all {props.all}</p>
-        <p>average {props.all / 3}</p>
-        <p>positive {props.good / props.all*100}%</p>
-        <p>{props.text}</p>
+        <p>good {good}</p>
+        <p>neutral {neutral}</p>
+        <p>bad {bad}</p>
+        <p>all {all}</p>
+        <p>average {all / 3}</p>
+        <p>positive {good / all*100}%</p>
+        <p>{text}</p>
     </div>
   )
 }
